@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #101b3c;
+  font-family: "montserrat", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input,
+textarea,
+button {
+  font-family: inherit;
+}
+
+.container {
+  width: 420px;
+  height: 530px;
+  padding: 25px;
+  background-color: #f3f4f7;
+  border-radius: 10px;
+  box-shadow: 0 0 25px 5px rgba(83, 87, 95, 0.25);
+  /* BounceIn Animation */
+}
+.container h1 {
+  padding: 20px 0;
+  color: #090909;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+.container .text-field {
+  width: 100%;
+  height: 230px;
+  margin: 20px 0;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid #52565e;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  resize: none;
+}
+.container .copy-btn {
+  padding: 10px 15px;
+  color: #f3f4f7; /* Use tertiary-color variable */
+  background-color: #037ef3;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.container .copy-btn i {
+  margin-left: 5px; /* Add margin for spacing between text and icon */
+}
+.container .copy-btn:active {
+  transform: scale(0.98);
+}
+.container .copy-btn:hover {
+  color: #fff; /* Change text color to white on hover */
+  background-color: #093763; /* Change background color to blue on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added box-shadow */
+  transform: translateY(-2px); /* Added translateY for subtle hover effect */
+}
+.container .copy-btn.bounce-effect {
+  animation: bounceIn 0.8s linear;
+}
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  20% {
+    transform: scale(1.1);
+    color: #fff; /* Change to white */
+    background-color: #037ef3; /* Change to blue */
+  }
+  40% {
+    transform: scale(0.9);
+    color: #f3f4f7; /* Back to original text color */
+    background-color: #037ef3; /* Back to original background color */
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.03);
+    color: #fff; /* Change to white */
+    background-color: #037ef3; /* Change to blue */
+  }
+  80% {
+    transform: scale(0.97);
+    color: #f3f4f7; /* Back to original text color */
+    background-color: #037ef3; /* Back to original background color */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    color: #f3f4f7; /* Back to original text color */
+    background-color: #037ef3; /* Back to original background color */
+  }
+}/*# sourceMappingURL=style.css.map */

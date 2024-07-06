@@ -1,0 +1,128 @@
+$primary-color: #037ef3;
+$secondary-color: #101b3c;
+$tertiary-color: #f3f4f7;
+$text-color: #090909;
+$border-color: #52565e;
+$placeholder-color: #120f0f;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: $secondary-color;
+  font-family: "montserrat", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input,
+textarea,
+button {
+  font-family: inherit;
+}
+
+.container {
+  width: 420px;
+  height: 530px;
+  padding: 25px;
+  background-color: $tertiary-color;
+  border-radius: 10px;
+  box-shadow: 0 0 25px 5px rgba(83, 87, 95, 0.25);
+
+  h1 {
+    padding: 20px 0;
+    color: $text-color;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .text-field {
+    width: 100%;
+    height: 230px;
+    margin: 20px 0;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid $border-color;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    resize: none;
+  }
+
+  .copy-btn {
+    padding: 10px 15px;
+    color: $tertiary-color; /* Use tertiary-color variable */
+    background-color: $primary-color;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  
+    i {
+        margin-left: 5px; /* Add margin for spacing between text and icon */
+      }
+  
+    &:active {
+      transform: scale(0.98);
+    }
+  
+    &:hover {
+      color: #fff; /* Change text color to white on hover */
+      background-color: #093763; /* Change background color to blue on hover */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added box-shadow */
+      transform: translateY(-2px); /* Added translateY for subtle hover effect */
+    }
+
+
+    &.bounce-effect {
+        animation: bounceIn 0.8s linear;
+      }
+    }
+    
+    /* BounceIn Animation */
+    @keyframes bounceIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.3);
+      }
+      20% {
+        transform: scale(1.1);
+        color: #fff; /* Change to white */
+        background-color: #037ef3; /* Change to blue */
+      }
+      40% {
+        transform: scale(0.9);
+        color: $tertiary-color; /* Back to original text color */
+        background-color: $primary-color; /* Back to original background color */
+      }
+      60% {
+        opacity: 1;
+        transform: scale(1.03);
+        color: #fff; /* Change to white */
+        background-color: #037ef3; /* Change to blue */
+      }
+      80% {
+        transform: scale(0.97);
+        color: $tertiary-color; /* Back to original text color */
+        background-color: $primary-color; /* Back to original background color */
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+        color: $tertiary-color; /* Back to original text color */
+        background-color: $primary-color; /* Back to original background color */
+      }
+    }
+}
